@@ -9,6 +9,13 @@ class UserService {
         return [user.id, user.username, user.name, "Sin bio"]
 
     }
+    static updateUserUsername(user, newUsername) {
+        return user.username = newUsername
+    }
+
+
+
+
 
 }
 
