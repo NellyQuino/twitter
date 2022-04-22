@@ -28,11 +28,14 @@ describe("Test para User", () => {
         expect(user.getDateCreated).not.toBeUndefined()
         expect(user.getLastUpdated).not.toBeUndefined()
     });
-    /*
+
     test("Requerimiento 4: Agregar setters", () => {
-        const user = new User(2, "nellyjqh", "nelly", "Bio")
+        const user = new User(1, "nellyjqh", "nelly", "Bio")
         user.setUsername = "jazminqh"
         expect(user.username).toBe("jazminqh")
-    })/** */
+
+        user.setBio = "New bio"
+        expect(user.bio).toBe("New bio")
+    })
 
 })
