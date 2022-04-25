@@ -1,3 +1,4 @@
+const User = require('../../app/models/User')
 const UserView = require('./../../app/views/UserView')
 
 
@@ -20,6 +21,17 @@ describe("Test for UserView", () => {
         const result = UserView.createUser(payload)
 
         expect(result.error).toMatch(/necesitas tener un valor válido/)
+
+    })
+    test("Create a user by a given a valid payload", () => {
+        const payload = { id: 1, username: "username", name: "name" }
+        const result = UserView.createUser(payload)
+        expect(result.id).toBe(1)
+        expect(result.username).toBe("username")
+        expect(result.name).toBe("name")
+
+
+
 
     })
 
